@@ -1,7 +1,7 @@
 site_name: 故障诊断指南
-site_url: https://yourorg.github.io/yourrepo
-repo_url: https://github.com/yourorg/yourrepo
-repo_name: yourrepo
+site_url: https://rotc-kais.github.io/troubleshooting-docs
+repo_url: https://github.com/rotc-kais/troubleshooting-docs
+repo_name: troubleshooting-docs
 edit_uri: edit/main/docs/
 
 theme:
@@ -51,19 +51,25 @@ markdown_extensions:
 
 # 顶部导航（按模块分类）
 nav:
-  - 总览: index.md
-  - 平台: platform/index.md
-  - 网络: networking/index.md
-  - 存储: storage/index.md
-  - 镜像仓库: registry/index.md
-  - 计算: compute/index.md
-  - 安全: security/index.md
-  - 监控: monitoring/index.md
-  - 日志: logging/index.md
-  - GitOps: gitops/index.md
+  - Overview: index.md
+  - ACP: # Container Platform  
+    - Overview: acp/index.md
+    - Network: 
+      - Overview: acp/network/index.md
+      - Calico: acp/network/calico/index.md
+      - Kube-OVN: acp/network/kube-ovn/index.md
+    - Storage: 
+      - Overview: acp/storage/index.md
+      - Ceph: acp/storage/ceph/index.md
+      - NFS: acp/storage/nfs/index.md
+  - AIT: ait/index.md # Infrastructure
+  - Middleware: middleware/index.md # Data Service
+  - AI: ai/index.md # AI
+  - DevOps: devops/index.md # DevOps
+  - Others: others/index.md # Others
 
 extra:
   social:
     - icon: material/github
-      link: https://github.com/yourorg/yourrepo
+      link: https://github.com/rotc-kais/troubleshooting-docs
 
