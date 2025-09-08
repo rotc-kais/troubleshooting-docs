@@ -49,32 +49,7 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
 
-# 顶部导航（按模块分类）
-nav:
-  - Overview: index.md
-  - ACP:
-    - acp/index.md                
-    - Network:
-      - acp/network/index.md
-      - Calico: acp/network/calico/index.md
-      - Kube-OVN: acp/network/kube-ovn/index.md
-      - Ingress: 
-        - acp/network/ingress/index.md
-        - alb: acp/network/ingress/alb/index.md
-    - Storage:
-      - acp/storage/index.md
-      - Ceph: acp/storage/ceph/index.md
-      - NFS: acp/storage/nfs/index.md
-  - AIT:
-    - ait/index.md
-  - Middleware:
-    - middleware/index.md
-  - AI:
-    - ai/index.md
-  - DevOps:
-    - devops/index.md
-  - Others:
-    - others/index.md
+
 
 extra:
   social:
