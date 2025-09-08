@@ -11,6 +11,7 @@ theme:
     - navigation.instant
     - navigation.tracking
     - navigation.sections
+    - navigation.indexes 
     - navigation.expand
     - navigation.top
     - toc.integrate
@@ -52,21 +53,26 @@ markdown_extensions:
 # 顶部导航（按模块分类）
 nav:
   - Overview: index.md
-  - ACP: # Container Platform  
-    - Overview: acp/index.md
-    - Network: 
-      - Overview: acp/network/index.md
+  - ACP:
+    - acp/index.md                
+    - Network:
+      - acp/network/index.md
       - Calico: acp/network/calico/index.md
       - Kube-OVN: acp/network/kube-ovn/index.md
-    - Storage: 
-      - Overview: acp/storage/index.md
+    - Storage:
+      - acp/storage/index.md
       - Ceph: acp/storage/ceph/index.md
       - NFS: acp/storage/nfs/index.md
-  - AIT: ait/index.md # Infrastructure
-  - Middleware: middleware/index.md # Data Service
-  - AI: ai/index.md # AI
-  - DevOps: devops/index.md # DevOps
-  - Others: others/index.md # Others
+  - AIT:
+    - ait/index.md
+  - Middleware:
+    - middleware/index.md
+  - AI:
+    - ai/index.md
+  - DevOps:
+    - devops/index.md
+  - Others:
+    - others/index.md
 
 extra:
   social:
