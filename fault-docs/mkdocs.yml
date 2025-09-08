@@ -1,0 +1,69 @@
+site_name: 故障诊断指南
+site_url: https://yourorg.github.io/yourrepo
+repo_url: https://github.com/yourorg/yourrepo
+repo_name: yourrepo
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
+    - content.code.copy
+    - content.action.edit
+    - search.suggest
+    - search.highlight
+    - announce.dismiss
+  palette:
+    - scheme: default
+      primary: blue
+      accent: indigo
+
+plugins:
+  - search
+  - glightbox
+  - git-revision-date-localized:
+      enable_creation_date: true
+      fallback_to_build_date: true
+
+markdown_extensions:
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.snippets
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+# 顶部导航（按模块分类）
+nav:
+  - 总览: index.md
+  - 平台: platform/index.md
+  - 网络: networking/index.md
+  - 存储: storage/index.md
+  - 镜像仓库: registry/index.md
+  - 计算: compute/index.md
+  - 安全: security/index.md
+  - 监控: monitoring/index.md
+  - 日志: logging/index.md
+  - GitOps: gitops/index.md
+
+extra:
+  social:
+    - icon: material/github
+      link: https://github.com/yourorg/yourrepo
+
