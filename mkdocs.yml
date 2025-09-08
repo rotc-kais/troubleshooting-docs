@@ -10,7 +10,6 @@ theme:
   features:
     - navigation.instant
     - navigation.tracking
-    - navigation.sections
     - navigation.indexes 
     - navigation.expand
     - navigation.top
@@ -52,7 +51,7 @@ markdown_extensions:
 
 # 顶部导航（按模块分类）
 nav:
-  - Overview: index.md
+  - index.md
   - ACP:
     - acp/index.md                
     - Network:
