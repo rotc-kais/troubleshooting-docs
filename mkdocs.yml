@@ -1,4 +1,4 @@
-site_name: 故障诊断指南
+site_name: Troubleshooting
 site_url: https://rotc-kais.github.io/troubleshooting-docs
 repo_url: https://github.com/rotc-kais/troubleshooting-docs
 repo_name: troubleshooting-docs
@@ -58,6 +58,9 @@ nav:
       - acp/network/index.md
       - Calico: acp/network/calico/index.md
       - Kube-OVN: acp/network/kube-ovn/index.md
+      - Ingress: 
+        - acp/network/ingress/index.md
+        - alb: acp/network/ingress/alb/index.md
     - Storage:
       - acp/storage/index.md
       - Ceph: acp/storage/ceph/index.md
