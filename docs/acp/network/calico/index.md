@@ -16,4 +16,5 @@ kubectl -n kube-system logs -l k8s-app=calico-node --tail=200
 2. BGP 邻居建立/抖动 → 对端路由/MTU/网卡 offload
 3. NetworkPolicy 命中情况 → 临时禁用/放开验证
 
-{% include "_snippets/collect_basic.md" %}
+
+{% include "_auto_index.md" %}

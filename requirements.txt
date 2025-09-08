@@ -3,3 +3,5 @@ mkdocs-material>=9.5.0
 mkdocs-glightbox>=0.3.8
 mkdocs-git-revision-date-localized-plugin>=1.2.6
 mkdocs-awesome-pages-plugin>=2.10.0
+mkdocs-gen-files>=0.7.0
+pymdown-snippets>=5.2.2

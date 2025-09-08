@@ -31,6 +31,9 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
       fallback_to_build_date: true
+  - gen-files:
+      scripts:
+        - scripts/gen_dir_listings.py 
 
 markdown_extensions:
   - admonition
