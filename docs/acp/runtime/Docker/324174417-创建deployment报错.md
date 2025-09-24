@@ -1,1 +1,36 @@
----kind:   - Troubleshootingproducts:    - Alauda Container Platform   - Alauda DevOps   - Alauda AI   - Alauda Application Services   - Alauda Service Mesh   - Alauda Developer PortalProductsVersion:   - 4.1.0,4.2.x---<!-- A type of document that involves encountering a fault, diag...it, performing root cause analysis, and providing solutions. --># 创建deployment报错创建deployment挂载configmap报错## Cause- configmap defaultmode字段使用了8进制数值420## Resolution- 将defaultmode字段改为10进制数值420## [workaround]## [Related Information]**Screenshots**![](/download/attachments/324174417/1753862066_99781_64fba3_%25E5%25BE%25AE%25E4%25BF%25A1%25E5%259B%25BE%25E7%2589%2587_2025-07-30_155304_641.png?version=1&modificationDate=1753952597000&api=v2)- Environment: Kubernetes 3.18.2- configmap- deployment- defaultMode- Component: Docker- Page ID: 324174417- Original Title: 容器平台-原生组件-Kubernetes，Docker等原生组件问题-创建deployment报错-114109
+---
+kind:
+  - Troubleshooting
+products:
+  - Alauda Container Platform
+  - Alauda DevOps
+  - Alauda AI
+  - Alauda Application Services
+  - Alauda Service Mesh
+  - Alauda Developer Portal
+ProductsVersion:
+  - 4.1.0,4.2.x
+---
+<!-- A type of document that involves encountering a fault, diagnosing it, performing root cause analysis, and providing solutions. -->
+
+# 创建deployment报错
+
+创建deployment挂载configmap报错
+
+## Cause
+- configmap的defaultmode字段使用了八进制数值420，而Kubernetes需要十进制表示
+
+## Resolution
+- 将configmap的defaultmode字段改为十进制数值（如420的八进制对应十进制272）
+
+## [workaround]
+
+## [Related Information]
+**Screenshots**
+![](assets/rong-qi-ping-tai-yuan-sheng-zu-jian-kubernetes-dockerdeng-yuan-sheng-zu-jian-wen/1753862066_99781_64fba3_%25E5%25BE%25AE%25E4%25BF%25A1%25E5%259B%25BE%25E7%2589%2587_2025-07-30_155304_641_1.png)
+- Environment: 3.18.2
+- configmap volume挂载配置
+- defaultMode
+- Component: Docker
+- Page ID: 324174417
+- Original Title: 容器平台-原生组件-Kubernetes，Docker等原生组件问题-创建deployment报错-114109

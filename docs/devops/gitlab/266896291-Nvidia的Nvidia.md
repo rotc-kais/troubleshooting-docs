@@ -1,1 +1,44 @@
----kind:   - Troubleshootingproducts:    - Alauda Container Platform   - Alauda DevOps   - Alauda AI   - Alauda Application Services   - Alauda Service Mesh   - Alauda Developer PortalProductsVersion:   - 4.1.0,4.2.x---<!-- A type of document that involves encountering a fault, diag...it, performing root cause analysis, and providing solutions. --># Nvidia的Nvidia无法连接外网 无法使用Nvidia官方源下载Nvidia-container-toolkit## Cause- 网络限制导致无法访问Nvidia官方源## Resolution- 从GitHub releases页面下载指定版本的rpm包（例如1.17.3）- 安装四个必要rpm包：libnvidia-container-tools-1.17.3-1.x86_64.rpm, libnvidia-container1-1.17.3-1.x86_64.rpm, nvidia-container-toolkit-1.17.3-1.x86_64.rpm, nvidia-container-toolkit-base-1.17.3-1.x86_64.rpm- 执行命令：yum -y localinstall \*- 或使用方案二命令：yum install --downloadonly --downloaddir=<下载目录> nvidia-container-toolkit## [workaround]- 在已安装环境中使用yum downloadonly命令保存rpm包及依赖## [Related Information]**Screenshots**![](assets/nvidiade-nvidia-container-toolkit-gong-ju-rpmbao-xia-zai-fang-shi/image-2025-2-27_10-34-32.png)![](assets/nvidiade-nvidia-container-toolkit-gong-ju-rpmbao-xia-zai-fang-shi/image-2025-2-27_10-39-24.png)![](assets/nvidiade-nvidia-container-toolkit-gong-ju-rpmbao-xia-zai-fang-shi/image-2025-2-27_10-45-28.png)- Environment: 3.16.2- libnvidia-container-tools- libnvidia-container1- nvidia-container-toolkit- nvidia-container-toolkit-base- yum localinstall- yum install --downloadonly- https://github.com/NVIDIA/nvidia-container-toolkit/releases/- Component: gitlab- Page ID: 266896291- Original Title: Nvidia的Nvidia-container-toolkit 工具 rpm包下载 方式
+---
+kind:
+  - Troubleshooting
+products:
+  - Alauda Container Platform
+  - Alauda DevOps
+  - Alauda AI
+  - Alauda Application Services
+  - Alauda Service Mesh
+  - Alauda Developer Portal
+ProductsVersion:
+  - 4.1.0,4.2.x
+---
+<!-- A type of document that involves encountering a fault, diagnosing it, performing root cause analysis, and providing solutions. -->
+
+# Nvidia的Nvidia
+
+无法连接外网 无法使用nvidia官方文档中推荐的源下载Nvidia-container-toolkit
+
+## Cause
+- 客户环境网络限制无法连接外网
+
+## Resolution
+- 从GitHub下载指定版本rpm包（libnvidia-container-tools/libnvidia-container1/nvidia-container-toolkit/nvidia-container-toolkit-base）后执行yum -y localinstall \*
+- 使用yum install --downloadonly --downloaddir=<下载目录> nvidia-container-toolkit保存rpm包及依赖
+
+## [workaround]
+
+## [Related Information]
+**Screenshots**
+![](assets/nvidiade-nvidia-container-toolkit-gong-ju-rpmbao-xia-zai-fang-shi/image-2025-2-27_10-34-32.png)
+![](assets/nvidiade-nvidia-container-toolkit-gong-ju-rpmbao-xia-zai-fang-shi/image-2025-2-27_10-39-24.png)
+![](assets/nvidiade-nvidia-container-toolkit-gong-ju-rpmbao-xia-zai-fang-shi/image-2025-2-27_10-45-28.png)
+- Environment: 3.16.2
+- libnvidia-container-tools
+- libnvidia-container1
+- nvidia-container-toolkit
+- nvidia-container-toolkit-base
+- yum localinstall
+- yum install --downloadonly
+- GitHub releases页面
+- Component: gitlab
+- Page ID: 266896291
+- Original Title: Nvidia的Nvidia-container-toolkit 工具 rpm包下载 方式

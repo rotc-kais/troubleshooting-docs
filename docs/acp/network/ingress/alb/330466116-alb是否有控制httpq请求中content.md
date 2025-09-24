@@ -1,1 +1,38 @@
----kind:   - Troubleshootingproducts:    - Alauda Container Platform   - Alauda DevOps   - Alauda AI   - Alauda Application Services   - Alauda Service Mesh   - Alauda Developer PortalProductsVersion:   - 4.1.0,4.2.x---<!-- A type of document that involves encountering a fault, diag...it, performing root cause analysis, and providing solutions. --># alb是否有控制httpq请求中content返回的请求体接收到的是乱码## Cause- ALB默认启用了gzip压缩## Resolution- 通过ALB控制台修改配置关闭gzip压缩功能## [workaround]## [Related Information]**Screenshots**![](assets/rong-qi-ping-tai-wang-luo-albshi-fou-you-kong-zhi-httpqqing-qiu-zhong-content-ty/mceclip6_1755053127789_v3iqg.png)![](assets/rong-qi-ping-tai-wang-luo-albshi-fou-you-kong-zhi-httpqqing-qiu-zhong-content-ty/mceclip7_1755053198710_lg3us.png)- Environment: 3.16.2- alb配置项- gzip- Component: alb- Page ID: 330466116- Original Title: 容器平台-网络-alb是否有控制httpq请求中content-type:gzip的配置-115051
+---
+kind:
+  - Troubleshooting
+products:
+  - Alauda Container Platform
+  - Alauda DevOps
+  - Alauda AI
+  - Alauda Application Services
+  - Alauda Service Mesh
+  - Alauda Developer Portal
+ProductsVersion:
+  - 4.1.0,4.2.x
+---
+<!-- A type of document that involves encountering a fault, diagnosing it, performing root cause analysis, and providing solutions. -->
+
+# alb是否有控制httpq请求中content
+
+返回的请求体接收到的是乱码
+
+## Cause
+- ALB默认开启了gzip压缩
+
+## Resolution
+- 修改ALB配置关闭gzip压缩功能
+
+## [workaround]
+
+## [Related Information]
+**Screenshots**
+![](assets/rong-qi-ping-tai-wang-luo-albshi-fou-you-kong-zhi-httpqqing-qiu-zhong-content-ty/mceclip6_1755053127789_v3iqg.png)
+![](assets/rong-qi-ping-tai-wang-luo-albshi-fou-you-kong-zhi-httpqqing-qiu-zhong-content-ty/mceclip7_1755053198710_lg3us.png)
+- Environment: 3.16.2
+- alb配置
+- gzip配置
+- content-type头
+- Component: alb
+- Page ID: 330466116
+- Original Title: 容器平台-网络-alb是否有控制httpq请求中content-type:gzip的配置-115051

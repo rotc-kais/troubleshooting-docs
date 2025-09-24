@@ -1,1 +1,41 @@
----kind:   - Troubleshootingproducts:    - Alauda Container Platform   - Alauda DevOps   - Alauda AI   - Alauda Application Services   - Alauda Service Mesh   - Alauda Developer PortalProductsVersion:   - 4.1.0,4.2.x---<!-- A type of document that involves encountering a fault, diag...it, performing root cause analysis, and providing solutions. --># 【Underlay】ACP 升级时 OVS 网桥上的节点 IP 丢失节点 OVS 网桥 br-provider 上的 IP 丢失 节点网络瘫痪 ovs-vswitchd 报错：socket_util_unix|DBG|ovn0: ioctl(SIOCGIFFLAGS) failed: No such device## Cause- OVS 版本从 branch-2.16 切换至 OVN 21.06 配置的低版本子模块- 低版本 OVS 缺少关键 bugfix## Resolution- 将 base 镜像中的 OVS 版本重新设置为 branch-2.16 分支- 修复 OVN 编译问题后重新构建镜像## [workaround]## [Related Information]**Screenshots**![](https://jira.alauda.cn/secure/attachment/126277/126277_image-2022-10-25-11-13-26-328.png) ![](https://jira.alauda.cn/secure/attachment/126278/126278_image-2022-10-25-11-13-34-795.png)- Environment: ACP 3.8 升级至 3.10.1- br-provider- ovs-vswitchd- Kube-OVN 1.8/1.9.8/1.11- SIOCGIFFLAGS- OVS internal port- Component: kube-Ovn- Page ID: 127429798- Original Title: 【Underlay】ACP 升级时 OVS 网桥上的节点 IP 丢失
+---
+kind:
+  - Troubleshooting
+products:
+  - Alauda Container Platform
+  - Alauda DevOps
+  - Alauda AI
+  - Alauda Application Services
+  - Alauda Service Mesh
+  - Alauda Developer Portal
+ProductsVersion:
+  - 4.1.0,4.2.x
+---
+<!-- A type of document that involves encountering a fault, diagnosing it, performing root cause analysis, and providing solutions. -->
+
+# 【Underlay】ACP 升级时 OVS 网桥上的节点 IP 丢失
+
+节点 OVS 网桥 br-provider 上的 IP 丢失 节点网络瘫痪
+
+## Cause
+- OVS internal port 被重建
+- OVS 版本降级导致(branch-2.16 切换到 OVN 21.06 配置的 OVS 子模块)
+
+## Resolution
+- 更新 OVS 版本到 branch-2.16 分支并修复 OVN 编译问题
+
+## [workaround]
+
+## [Related Information]
+**Screenshots**
+![](https://jira.alauda.cn/secure/attachment/126277/126277_image-2022-10-25-11-13-26-328.png) ![](https://jira.alauda.cn/secure/attachment/126278/126278_image-2022-10-25-11-13-34-795.png)
+- br-provider
+- ovs-vswitchd
+- Kube-OVN 1.8/1.9.8/1.11
+- OVS branch-2.16
+- OVN 21.06
+- socket_util_unix
+- SIOCGIFFLAGS
+- Component: kube-Ovn
+- Page ID: 127429798
+- Original Title: 【Underlay】ACP 升级时 OVS 网桥上的节点 IP 丢失
